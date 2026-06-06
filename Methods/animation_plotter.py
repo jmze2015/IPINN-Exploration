@@ -190,10 +190,10 @@ def save_anim_post(filename, main, xlim, ylim, output_name):
 
     fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 20
 
-    os.makedirs("Animations_Project", exist_ok=True)
+    os.makedirs("Animations", exist_ok=True)
 
     fig.write_html(
-        f"Animations_Project/{output_name}.html",
+        f"Animations/{output_name}.html",
         include_plotlyjs="cdn"
     )
 
@@ -216,14 +216,14 @@ def save_anim_pre(filename, main, xlim, ylim, output_name):
 
     fig.layout.updatemenus[0].buttons[0].args[1]["frame"]["duration"] = 50
 
-    os.makedirs("Animations_Project", exist_ok=True)
+    os.makedirs("Animations", exist_ok=True)
 
     fig.write_html(
-        f"Animations_Project/{output_name}.html",
+        f"Animations/{output_name}.html",
         include_plotlyjs="cdn"
     )
 
 #save_anim_pre("Data/M_500_literature_data.csv", main = "Numerical Solution of Proposed Initial Data (Goduvnov)", xlim=[-10, 10], ylim=[-4.2,2], output_name="M_500_literature_data")
-save_anim_post("Results/PINN_literature_5000epochs.csv", main = "Numerical Solution vs PINN Prediction (5000 Epochs)", xlim=[-10, 10], ylim=[-4.2,2], output_name="PINN_literature_5000epochs")
+#save_anim_post("Results/PINN_literature_5000epochs.csv", main = "Numerical Solution vs PINN Prediction (5000 Epochs)", xlim=[-10, 10], ylim=[-4.2,2], output_name="PINN_literature_5000epochs")
 
 
