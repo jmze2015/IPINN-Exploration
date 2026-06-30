@@ -145,8 +145,13 @@ def Multi_LA_method(m, T_max, V, g):
         ]
     )
 
+    fig.write_html(
+    "multi_linear_advection.html",
+    include_plotlyjs="cdn",
+    full_html=True)
+
     fig.show()
 
-Multi_LA_method(80, 80, [-1,1], F)
+Multi_LA_method(80, 80, [-1,1], G)
 
 
